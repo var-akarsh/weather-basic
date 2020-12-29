@@ -5,6 +5,7 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 const app = express()
+const port = process.env.PORT || 8000
 
 
 //Define path for express 
@@ -99,6 +100,6 @@ app.get('*', (req, res) => {
         name: ' Akarsh Saxena'
     })
 })
-app.listen(8000, () => {
-    console.log('Running on port 8000')
+app.listen(port, () => {
+    console.log('Running on port' + port + "...")
 })
